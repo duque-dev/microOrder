@@ -1,14 +1,15 @@
 package co.com.order.model.order;
-import lombok.Builder;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 //import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-//@NoArgsConstructor
-@AllArgsConstructor
-@Builder(toBuilder = true)
+import java.util.List;
+
+@Data
 public class Order {
+
+    private Long id;
+    private String clientId;
+    private List<String> menuItems;
+    private double totalPrice;
+
 }
